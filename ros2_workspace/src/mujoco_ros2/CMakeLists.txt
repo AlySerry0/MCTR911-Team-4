@@ -47,4 +47,9 @@ install(DIRECTORY launch
                   model
         DESTINATION share/${PROJECT_NAME})                                                          # Install so ROS2 can find them
         
+# Install the mujoco_menagerie models
+install(
+  DIRECTORY mujoco_menagerie
+  DESTINATION share/${PROJECT_NAME}
+)
 ament_package()
