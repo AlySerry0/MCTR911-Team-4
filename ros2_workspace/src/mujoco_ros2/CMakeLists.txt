@@ -4,6 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 project(mujoco_ros2)
 
+set(MUJOCO_PATH "/opt/mujoco/mujoco-3.2.0")
+
+# Include dirs: our own headers + MuJoCo headers
+include_directories(
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+  ${MUJOCO_PATH}/include
+)
+
+# MuJoCo libraries
+link_directories(${MUJOCO_PATH}/lib)
+
+
+
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
@@ -18,12 +31,7 @@ find_package(rclcpp REQUIRED)                                                   
 find_package(sensor_msgs REQUIRED)                                                                  # sensor_msgs::msg::JointState
 find_package(std_msgs REQUIRED)                                                                     # std_msgs::msg::Float64MultiArray
 
-# MuJoCo
-set(MUJOCO_PATH "/home/aly/.mujoco/mujoco-3.3.7") # UPDATE THIS TO YOUR MUJOCO PATH
-include_directories(include)                                                                        # Local header files
-include_directories(${MUJOCO_PATH}/include/mujoco)                                                  # MuJoCo header files
-include_directories(${MUJOCO_PATH}/include)                                                         # Additional MuJoCo header files
-link_directories(${MUJOCO_PATH}/lib)                                                                # Location of MuJoCo libraries
+                                                                # Location of MuJoCo libraries
 
 ####################################################################################################
 #                                           EXECUTABLES                                            #
