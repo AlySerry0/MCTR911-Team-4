@@ -7,7 +7,7 @@ from ament_index_python.packages import get_package_share_directory
 def main():
     # 1. Define the path to the URDF file
     # This finds the file installed by the ROS2 package
-    urdf_dir = get_package_share_directory('ur_description')
+    urdf_dir = get_package_share_directory('stacking_robot')
     urdf_path = os.path.join(urdf_dir, 'urdf', 'ur5e.urdf')
 
     if not os.path.exists(urdf_path):

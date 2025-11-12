@@ -17,4 +17,16 @@ if(BUILD_TESTING)
   ament_add_pytest_test(view_ur_launch test/test_view_ur_launch.py)
 endif()
 
+# Install the urdf folder
+install(
+  DIRECTORY urdf
+  DESTINATION share/${PROJECT_NAME}
+)
+
+# Install the meshes folder (needed by the urdf)
+install(
+  DIRECTORY meshes
+  DESTINATION share/${PROJECT_NAME}
+)
+
 ament_package()
