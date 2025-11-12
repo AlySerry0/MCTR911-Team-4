@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(mujoco_ros2)
 
-set(MUJOCO_PATH "/opt/mujoco/mujoco-3.2.0")
+set(MUJOCO_PATH "/home/aly/.mujoco/mujoco-3.3.7")
 
 # Include dirs: our own headers + MuJoCo headers
 include_directories(
