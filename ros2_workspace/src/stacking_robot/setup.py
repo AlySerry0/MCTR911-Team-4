@@ -24,13 +24,15 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'gui_node = stacking_robot.gui_node:main',
+            'gui_teleop = stacking_robot.gui_teleop:main',
+            'gui_trajectory = stacking_robot.gui_trajectory:main',
             'kinematics_solver = stacking_robot.kinematics_solver:main',
             'velocity_kinematics = stacking_robot.velocity_kinematics:main',
             'explore_chain = stacking_robot.explore_chain:main',
             'test_kinematics = stacking_robot.test_kinematics:main',
             'test_velocity_kinematics = stacking_robot.test_velocity_kinematics:main',
-            'validate_velocity_kinematics = stacking_robot.validate_velocity_kinematics:main', # <-- ADD THIS
+            'validate_velocity_kinematics = stacking_robot.validate_velocity_kinematics:main',
+            'validate_trajectories = stacking_robot.validate_trajectories:main',
         ],
     },
 )
