@@ -33,6 +33,12 @@ setup(
             'test_velocity_kinematics = stacking_robot.test_velocity_kinematics:main',
             'validate_velocity_kinematics = stacking_robot.validate_velocity_kinematics:main',
             'validate_trajectories = stacking_robot.validate_trajectories:main',
+            'position_controller = stacking_robot.position_controller:main',
+            'pick_and_place = stacking_robot.pick_and_place:main',
+            'debug_coordinates = stacking_robot.debug_coordinates:main',
+            'test_orientation = stacking_robot.test_orientation:main',
+            'simple_test = stacking_robot.simple_test:main',
+            'final_pick_and_place = stacking_robot.final_pick_and_place:main', 
         ],
     },
 )
